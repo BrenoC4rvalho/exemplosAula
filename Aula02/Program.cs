@@ -9,8 +9,8 @@ do
     {
 
         Console.WriteLine("Menu");
-        Console.WriteLine("1 - Metro para milimetros.");
-        Console.WriteLine("2 - Somar dois numeros.");
+        Console.WriteLine("1 - Somar dois numeros.");
+        Console.WriteLine("2 - Metro para milimetros.");
         Console.WriteLine("3- sair.");
 
         int opcao = int.Parse(Console.ReadLine());
@@ -18,11 +18,12 @@ do
         if(opcao == 1)
         {
             SomaDoisNumeros somador = new SomaDoisNumeros();
+            Console.Write("Informe o primeiro número: ");
             int n1 = int.Parse(Console.ReadLine());
+            Console.Write("Informe o segundo número: ");
             int n2 = int.Parse(Console.ReadLine());
 
-            int resultado = somador(n1, n2);
-            Console.WriteLine($"O valor da soma de {n1} e {n2} é igual {resultado} ");
+            Console.WriteLine($"O valor da soma de {n1} e {n2} é igual " + somador.Somar(n1, n2));
 
         }
 
